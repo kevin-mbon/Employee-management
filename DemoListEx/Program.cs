@@ -9,10 +9,7 @@ namespace DemoListEx
             EmployCrud employCrud = new EmployCrud();
             employList =  employCrud.Show();
             Console.WriteLine("lIST OF EMPLOY");
-            if (employList == null)
-            {
-                Console.WriteLine("NO employ yet added");
-            }
+            
             foreach (Employ e in employList)
             {
                 

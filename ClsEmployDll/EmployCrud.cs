@@ -25,6 +25,10 @@ namespace ClsEmployDll
                 return"RECORD NOT FOUND";
             }
         }
+        public String Validate(Employ employ)
+        {
+            return employ.Name;
+        }
         public string UpdateEmploy(Employ updEmploy)
         { 
             Employ res = SearchEmploy(updEmploy.Employno);
