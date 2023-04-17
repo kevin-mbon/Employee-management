@@ -63,6 +63,10 @@ namespace ClsEmployDll
 
             return sb;
         }
+        public String Validate(Employ employ)
+        {
+            return employ.Name;
+        }
         public string UpdateEmploy(Employ updEmploy)
         {
             Employ res = SearchEmploy(updEmploy.Employno);
