@@ -1,4 +1,6 @@
 ﻿using ClsEmployDll;
+using System.Text;
+
 namespace DemoListEx
 {
     class Program
@@ -42,6 +44,7 @@ namespace DemoListEx
             Employ employ = new Employ();
             Console.WriteLine("Enter employ NO ");
             employ.Employno = Convert.ToInt32(Console.ReadLine());
+           
             Console.WriteLine("Enter employ name ");
             employ.Name = Console.ReadLine();
             Console.WriteLine("Enter employ salary ");
@@ -67,10 +70,13 @@ namespace DemoListEx
             employ.Name = Console.ReadLine();
             Console.WriteLine("Enter employ salary ");
             employ.Salary = Convert.ToDouble(Console.ReadLine());
+            
 
             EmployCrud employCrud = new EmployCrud();
-            Console.WriteLine(employCrud.AddEmploy(employ)) ;
+            Console.WriteLine(employCrud.Validation(employ)) ;
+         
         }
+    
         static void Main(string[] args)
         {
             int printer;
@@ -91,6 +97,8 @@ namespace DemoListEx
                 {
                     case 1:
                         AddEmployInput();
+                        
+                        
                         break;
                     case 2:
                         ShowEmployMain();
